@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bharat Traders | Construction Planner & Estimator</title>
+<style>
+:root{--blue:#0b5ed7;--dark:#073b7a;--light:#eef6ff;--text:#172033;--muted:#65738b;--white:#fff;--green:#159957}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--text);background:#f7faff}
+header{position:sticky;top:0;z-index:20;background:#fff;box-shadow:0 2px 12px #0001}
+.nav{max-width:1200px;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:14px 20px}.brand{font-size:23px;font-weight:800;color:var(--dark)}.brand span{color:var(--blue)}
+nav a{color:#26364f;text-decoration:none;margin-left:18px;font-weight:600;font-size:14px}
+.hero{background:linear-gradient(135deg,#073b7a,#0b5ed7);color:#fff;padding:72px 20px}.hero-inner{max-width:1200px;margin:auto;display:grid;grid-template-columns:1.25fr .75fr;gap:30px;align-items:center}
+h1{font-size:46px;margin:0 0 15px}.hero p{font-size:18px;line-height:1.7;color:#e8f2ff}.btn{border:0;border-radius:10px;padding:12px 18px;font-weight:700;cursor:pointer;text-decoration:none;display:inline-block}.primary{background:#fff;color:var(--dark)}.blue{background:var(--blue);color:#fff}.green{background:var(--green);color:#fff}.ghost{background:#eaf3ff;color:var(--dark)}
+.hero-card,.card{background:#fff;border-radius:18px;padding:22px;box-shadow:0 8px 28px #0b5ed71a}.hero-card{color:var(--text)}.hero-card h3{margin-top:0}
+section{max-width:1200px;margin:auto;padding:55px 20px}section h2{text-align:center;font-size:31px;color:var(--dark);margin:0 0 10px}section>p{text-align:center;color:var(--muted);margin:0 auto 30px;max-width:800px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.feature{padding:24px}.feature h3{margin:10px 0}.icon{font-size:34px}
+.form-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}.field label{display:block;font-size:13px;font-weight:700;margin-bottom:6px}.field input,.field select{width:100%;padding:12px;border:1px solid #ccd7e7;border-radius:9px;background:#fff;font-size:15px}
+.result{margin-top:20px;background:var(--light);border:1px solid #cfe2ff;border-radius:14px;padding:18px}.result-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}.stat{background:#fff;border-radius:10px;padding:13px}.stat small{color:var(--muted)}.stat strong{display:block;margin-top:5px;color:var(--dark)}
+table{width:100%;border-collapse:collapse;background:#fff;border-radius:12px;overflow:hidden}th,td{padding:11px;border-bottom:1px solid #e6ebf2;text-align:left;font-size:14px}th{background:#eaf3ff;color:var(--dark)}
+.material-row{display:grid;grid-template-columns:1.4fr .8fr .8fr .8fr auto;gap:8px;margin-bottom:9px}.material-row input,.material-row select{padding:10px;border:1px solid #ccd7e7;border-radius:8px}
+.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:15px}.notice{font-size:12px;color:var(--muted);line-height:1.5}
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.design{height:210px;border-radius:16px;background:linear-gradient(135deg,#d9eaff,#8ebcff);display:flex;align-items:end;padding:18px;color:#073b7a;font-weight:800;overflow:hidden;position:relative}.design:before{content:"🏠";font-size:90px;position:absolute;right:20px;top:35px;opacity:.35}
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+footer{background:#062e61;color:#fff;padding:30px 20px;text-align:center}
+.modal{display:none;position:fixed;inset:0;background:#0008;z-index:50;align-items:center;justify-content:center;padding:15px}.modal-box{background:#fff;border-radius:16px;max-width:700px;width:100%;max-height:90vh;overflow:auto;padding:22px}.close{float:right;border:0;background:#eee;border-radius:50%;width:32px;height:32px;cursor:pointer}
+.admin-list{display:grid;grid-template-columns:1fr 1fr;gap:12px}.admin-list .card{box-shadow:none;border:1px solid #e1e8f2}
+@media(max-width:800px){.hero-inner,.contact{grid-template-columns:1fr}.grid,.gallery{grid-template-columns:1fr 1fr}.result-grid{grid-template-columns:1fr 1fr}nav{display:none}.hero h1{font-size:36px}.material-row{grid-template-columns:1fr 1fr}.material-row button{grid-column:span 2}}
+@media(max-width:520px){.grid,.gallery,.form-grid,.result-grid,.admin-list{grid-template-columns:1fr}section{padding:40px 15px}.hero{padding:50px 15px}}
+</style>
+</head>
+<body>
+<header>
+<div class="nav">
+<div class="brand">Bharat <span>Traders</span></div>
+<nav><a href="#home">Home</a><a href="#estimator">Estimator</a><a href="#designs">Designs</a><a href="#materials">Materials</a><a href="#contact">Contact</a><a href="#" onclick="openAdmin();return false">Admin</a></nav>
+</div>
+</header>
+
+<main>
+<section class="hero" id="home">
+<div class="hero-inner">
+<div>
+<h1>Build Smarter with Bharat Traders</h1>
+<p>Plan your house construction, estimate materials and budget, explore house designs, and send your requirement directly to Bharat Traders.</p>
+<a class="btn primary" href="#estimator">Start Estimation</a>
+<a class="btn ghost" href="#designs">View Designs</a>
+</div>
+<div class="hero-card">
+<h3>🏗️ One place for your construction planning</h3>
+<p>Automatic estimation + your own material quantities + budget planning + enquiry.</p>
+<div class="notice">Preliminary estimates only. Final quantities should be verified from architectural and structural drawings.</div>
+</div>
+</div>
+</section>
+
+<section>
+<h2>What You Can Do</h2><p>A simple tool for first-time home builders and customers buying construction materials.</p>
+<div class="grid">
+<div class="card feature"><div class="icon">🧮</div><h3>Automatic Estimate</h3><p>Enter area, floors, BHK and quality to get a preliminary material and budget estimate.</p></div>
+<div class="card feature"><div class="icon">✍️</div><h3>Your Own Materials</h3><p>Add any material, quantity, unit and rate. The website calculates your custom total.</p></div>
+<div class="card feature"><div class="icon">📲</div><h3>Send Enquiry</h3><p>Prepare your requirement and send it to Bharat Traders through WhatsApp.</p></div>
+</div>
+</section>
+
+<section id="estimator">
+<h2>Construction Estimator</h2><p>Use automatic calculation or enter your own material requirements below.</p>
+<div class="card">
+<h3>🧮 Automatic Estimate</h3>
+<div class="form-grid">
+<div class="field"><label>Total Built-up Area (sq.ft)</label><input id="area" type="number" value="2500" min="1"></div>
+<div class="field"><label>Floors</label><select id="floors"><option>Ground</option><option>G+1</option><option>G+2</option><option>G+3</option></select></div>
+<div class="field"><label>BHK</label><select id="bhk"><option>1 BHK</option><option>2 BHK</option><option selected>3 BHK</option><option>4 BHK</option><option>5+ BHK</option></select></div>
+<div class="field"><label>Quality</label><select id="quality"><option value=".9">Economy</option><option value="1" selected>Standard</option><option value="1.15">Premium</option></select></div>
+<div class="field"><label>Cement rate (₹/bag)</label><input id="cementRate" type="number" value="420"></div>
+<div class="field"><label>Steel rate (₹/kg)</label><input id="steelRate" type="number" value="65"></div>
+<div class="field"><label>Sand rate (₹/CFT)</label><input id="sandRate" type="number" value="55"></div>
+<div class="field"><label>Aggregate rate (₹/CFT)</label><input id="aggRate" type="number" value="50"></div>
+<div class="field"><label>Brick rate (₹/piece)</label><input id="brickRate" type="number" value="9"></div>
+<div class="field"><label>Tile rate (₹/sq.ft)</label><input id="tileRate" type="number" value="55"></div>
+<div class="field"><label>Paint rate (₹/litre)</label><input id="paintRate" type="number" value="250"></div>
+<div class="field"><label>Contingency (%)</label><input id="contingency" type="number" value="5"></div>
+</div>
+<div class="actions"><button class="btn blue" onclick="calculateAuto()">Calculate Estimate</button></div>
+<div id="autoResult"></div>
+</div>
+</section>
+
+<section id="materials">
+<h2>✍️ Customer's Own Material Requirement</h2><p>Add as many materials as you need. These are customer inputs and do not change Bharat Traders' official rates.</p>
+<div class="card">
+<div id="materialRows"></div>
+<div class="actions"><button class="btn blue" onclick="addMaterial()">+ Add Material</button><button class="btn green" onclick="calculateCustom()">Calculate My Requirement</button><button class="btn ghost" onclick="clearMaterials()">Clear</button></div>
+<div id="customResult"></div>
+</div>
+</section>
+
+<section id="designs">
+<h2>🏠 House Designs</h2><p>Choose a starting concept. Actual plans must be prepared and approved by qualified professionals according to the site and local rules.</p>
+<div class="gallery">
+<div class="design">Modern Front Elevation</div><div class="design">Modern Luxury Villa</div><div class="design">Simple Indian Home</div>
+<div class="design">Duplex House</div><div class="design">Box-Type Contemporary</div><div class="design">Home + Parking</div>
+</div>
+</section>
+
+<section>
+<h2>Construction Checklist</h2>
+<div class="grid">
+<div class="card"><h3>1. Planning</h3><p>Site measurement, soil test, architectural plan, structural drawings, permissions and budget.</p></div>
+<div class="card"><h3>2. Structure</h3><p>Excavation, foundation, columns, beams, slabs, stairs, reinforcement and shuttering.</p></div>
+<div class="card"><h3>3. Finishing</h3><p>Walls, doors, windows, electrical, plumbing, tiles, kitchen, bathrooms, painting and exterior work.</p></div>
+</div>
+</section>
+
+<section id="contact">
+<h2>📞 Bharat Traders</h2><p>Replace the demo contact details below with your real shop information before publishing.</p>
+<div class="contact">
+<div class="card"><h3>Shop Information</h3><p>📍 <b>Address:</b> Add your shop address here</p><p>📞 <b>Phone:</b> +91 XXXXXXXXXX</p><p>💬 <b>WhatsApp:</b> +91 XXXXXXXXXX</p><p>✉️ <b>Email:</b> your-email@example.com</p></div>
+<div class="card"><h3>Quick Enquiry</h3><div class="field"><label>Your Name</label><input id="customerName" placeholder="Enter your name"></div><br><div class="field"><label>Phone</label><input id="customerPhone" placeholder="Enter phone number"></div><br><div class="field"><label>Requirement</label><input id="customerNeed" placeholder="e.g. 2500 sq.ft house material"></div><div class="actions"><button class="btn green" onclick="sendWhatsApp()">Send on WhatsApp</button></div></div>
+</div>
+</section>
+</main>
+
+<footer>© 2026 Bharat Traders — Construction Materials & Planning. Demo website.</footer>
+
+<div class="modal" id="adminModal">
+<div class="modal-box">
+<button class="close" onclick="closeAdmin()">×</button>
+<h2>🔐 Bharat Traders Admin</h2>
+<p class="notice">Demo management panel. For a real public website, use server-side authentication/database; do not store real admin passwords in HTML/JavaScript.</p>
+<div id="adminLogin">
+<div class="field"><label>Demo Admin Password</label><input id="adminPass" type="password" placeholder="admin123"></div>
+<div class="actions"><button class="btn blue" onclick="adminLogin()">Login</button></div>
+</div>
+<div id="adminPanel" style="display:none">
+<div class="admin-list">
+<div class="card"><h3>💰 Official Rates</h3><p>Use the estimator fields to update demo rates. A future database can make these global for all customers.</p></div>
+<div class="card"><h3>🖼️ Photos & Designs</h3><p>Add files to the <b>images</b> folder and connect them to the gallery.</p></div>
+<div class="card"><h3>📩 Enquiries</h3><p id="enquiryCount">No enquiries stored in this browser.</p></div>
+<div class="card"><h3>⚙️ Website Settings</h3><p>Edit shop phone, WhatsApp, address and email in the code until a backend is connected.</p></div>
+</div>
+<br><button class="btn ghost" onclick="adminLogout()">Logout</button>
+</div>
+</div>
+</div>
+
+<script>
+const demoWhatsApp="91XXXXXXXXXX"; // REPLACE with Bharat Traders WhatsApp number, digits only.
+
+function money(n){return "₹"+Math.round(n).toLocaleString("en-IN")}
+function val(id){return Number(document.getElementById(id).value)||0}
+
+function calculateAuto(){
+ const area=val("area"); if(area<=0){alert("Please enter a valid area.");return}
+ const q=val("quality");
+ const cement=area*.42*q, steel=area*4.2*q, sand=area*.95*q, agg=area*.85*q, bricks=area*14*q, tiles=area*.78, paint=area*.14;
+ const material=(cement*val("cementRate"))+(steel*val("steelRate"))+(sand*val("sandRate"))+(agg*val("aggRate"))+(bricks*val("brickRate"))+(tiles*val("tileRate"))+(paint*val("paintRate"));
+ const labour=material*.45, electrical=material*.12, plumbing=material*.10, doors=material*.12, water=material*.05, misc=material*.05;
+ const base=material+labour+electrical+plumbing+doors+water+misc, cont=base*val("contingency")/100, total=base+cont;
+ document.getElementById("autoResult").innerHTML=`
+ <div class="result"><h3>Approximate Estimate</h3>
+ <div class="result-grid">
+ <div class="stat"><small>Material</small><strong>${money(material)}</strong></div>
+ <div class="stat"><small>Labour</small><strong>${money(labour)}</strong></div>
+ <div class="stat"><small>Other Work</small><strong>${money(electrical+plumbing+doors+water+misc)}</strong></div>
+ <div class="stat"><small>Grand Total</small><strong>${money(total)}</strong></div></div>
+ <br><table><tr><th>Material</th><th>Approx. Quantity</th><th>Cost</th></tr>
+ <tr><td>Cement</td><td>${cement.toFixed(0)} bags</td><td>${money(cement*val("cementRate"))}</td></tr>
+ <tr><td>Steel</td><td>${steel.toFixed(0)} kg</td><td>${money(steel*val("steelRate"))}</td></tr>
+ <tr><td>Sand</td><td>${sand.toFixed(0)} CFT</td><td>${money(sand*val("sandRate"))}</td></tr>
+ <tr><td>Aggregate</td><td>${agg.toFixed(0)} CFT</td><td>${money(agg*val("aggRate"))}</td></tr>
+ <tr><td>Bricks</td><td>${bricks.toFixed(0)} pcs</td><td>${money(bricks*val("brickRate"))}</td></tr>
+ <tr><td>Tiles</td><td>${tiles.toFixed(0)} sq.ft</td><td>${money(tiles*val("tileRate"))}</td></tr>
+ <tr><td>Paint</td><td>${paint.toFixed(0)} litres</td><td>${money(paint*val("paintRate"))}</td></tr>
+ <tr><th colspan="2">Base + Contingency</th><th>${money(total)}</th></tr></table>
+ <p class="notice">Approx. ${money(total/area)} per sq.ft. This is a preliminary thumb-rule estimate, not a BOQ or structural quantity calculation.</p>
+ <div class="actions"><button class="btn green" onclick="sendEstimateWhatsApp('Automatic estimate for '+area+' sq.ft, '+document.getElementById('floors').value+', '+document.getElementById('bhk').value+', total '+money(total))">Send Estimate to Bharat Traders</button></div>
+ </div>`;
+}
+
+function addMaterial(name="",qty="",unit="bags",rate=""){
+ const row=document.createElement("div"); row.className="material-row";
+ row.innerHTML=`<input class="mname" placeholder="Material name" value="${name}">
+ <input class="mqty" type="number" min="0" placeholder="Quantity" value="${qty}">
+ <select class="munit"><option ${unit=="bags"?"selected":""}>bags</option><option ${unit=="kg"?"selected":""}>kg</option><option ${unit=="CFT"?"selected":""}>CFT</option><option ${unit=="pieces"?"selected":""}>pieces</option><option ${unit=="sq.ft"?"selected":""}>sq.ft</option><option ${unit=="litres"?"selected":""}>litres</option><option ${unit=="ton"?"selected":""}>ton</option></select>
+ <input class="mrate" type="number" min="0" placeholder="Rate" value="${rate}">
+ <button class="btn ghost" onclick="this.parentElement.remove()">Remove</button>`;
+ document.getElementById("materialRows").appendChild(row);
+}
+function clearMaterials(){document.getElementById("materialRows").innerHTML="";addMaterial("Cement",500,"bags",420);addMaterial("Steel",2500,"kg",65)}
+function calculateCustom(){
+ const rows=[...document.querySelectorAll(".material-row")]; let total=0, text=[];
+ rows.forEach(r=>{const n=r.querySelector(".mname").value.trim(),q=Number(r.querySelector(".mqty").value)||0,u=r.querySelector(".munit").value,rate=Number(r.querySelector(".mrate").value)||0,c=q*rate;if(n&&q){total+=c;text.push(`${n}: ${q} ${u} × ₹${rate} = ${money(c)}`)}});
+ document.getElementById("customResult").innerHTML=`<div class="result"><h3>Your Material Estimate: ${money(total)}</h3>${text.length?`<ul>${text.map(x=>`<li>${x}</li>`).join("")}</ul>`:"<p>No valid material rows entered.</p>"}<div class="actions"><button class="btn green" onclick="sendEstimateWhatsApp('Customer material requirement. Total: '+money(${total})+' | '+${JSON.stringify(text.join(' ; '))})">Send Requirement to Bharat Traders</button></div></div>`;
+}
+function sendEstimateWhatsApp(message){saveEnquiry(message);const url="https://wa.me/"+demoWhatsApp+"?text="+encodeURIComponent("Hello Bharat Traders,%0A%0A"+message);if(!demoWhatsApp.includes("X"))window.open(url,"_blank");else alert("Please replace demoWhatsApp in the code with your real WhatsApp number first.");}
+function sendWhatsApp(){const n=document.getElementById("customerName").value||"Customer",p=document.getElementById("customerPhone").value||"",need=document.getElementById("customerNeed").value||"";const msg=`New enquiry from ${n}%0APhone: ${p}%0ARequirement: ${need}`;saveEnquiry(msg);if(!demoWhatsApp.includes("X"))window.open("https://wa.me/"+demoWhatsApp+"?text="+encodeURIComponent("Hello Bharat Traders,\n\n"+decodeURIComponent(msg)),"_blank");else alert("Please replace demoWhatsApp in the code with your real WhatsApp number first.");}
+function saveEnquiry(x){let a=JSON.parse(localStorage.getItem("bt_enquiries")||"[]");a.push({message:x,date:new Date().toLocaleString()});localStorage.setItem("bt_enquiries",JSON.stringify(a));}
+function openAdmin(){document.getElementById("adminModal").style.display="flex";document.getElementById("enquiryCount").textContent=(JSON.parse(localStorage.getItem("bt_enquiries")||"[]").length)+" enquiry/enquiries stored in this browser."}
+function closeAdmin(){document.getElementById("adminModal").style.display="none"}
+function adminLogin(){if(document.getElementById("adminPass").value==="admin123"){document.getElementById("adminLogin").style.display="none";document.getElementById("adminPanel").style.display="block"}else alert("Demo password is admin123")}
+function adminLogout(){document.getElementById("adminLogin").style.display="block";document.getElementById("adminPanel").style.display="none";document.getElementById("adminPass").value=""}
+clearMaterials();
+calculateAuto();
+</script>
+</body>
+</html>
