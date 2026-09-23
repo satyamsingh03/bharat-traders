@@ -27,6 +27,67 @@ footer{background:#062e61;color:#fff;padding:30px 20px;text-align:center}
 .admin-list{display:grid;grid-template-columns:1fr 1fr;gap:12px}.admin-list .card{box-shadow:none;border:1px solid #e1e8f2}
 @media(max-width:800px){.hero-inner,.contact{grid-template-columns:1fr}.grid,.gallery{grid-template-columns:1fr 1fr}.result-grid{grid-template-columns:1fr 1fr}nav{display:none}.hero h1{font-size:36px}.material-row{grid-template-columns:1fr 1fr}.material-row button{grid-column:span 2}}
 @media(max-width:520px){.grid,.gallery,.form-grid,.result-grid,.admin-list{grid-template-columns:1fr}section{padding:40px 15px}.hero{padding:50px 15px}}
+.design{
+    height:240px;
+    border-radius:16px;
+    position:relative;
+    overflow:hidden;
+    display:flex;
+    align-items:flex-end;
+    padding:20px;
+    color:white;
+    font-size:18px;
+    font-weight:800;
+    cursor:pointer;
+    background-size:cover;
+    background-position:center;
+    transition:.25s;
+    text-shadow:0 2px 6px #000;
+}
+
+.design:hover{
+    transform:translateY(-5px);
+    box-shadow:0 12px 30px #0003;
+}
+
+.design::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(
+        transparent 30%,
+        rgba(0,0,0,.75)
+    );
+}
+
+.design span{
+    position:relative;
+    z-index:2;
+}
+
+.design-modern{
+    background-image:url("https://productimages.withfloats.com/tile/6957c7616c093ee38784f895.jpg");
+}
+
+.design-luxury{
+    background-image:url("https://www.aslantasdunyasi.com/images/projects/project-villa-kayrak-cephe.png");
+}
+
+.design-simple{
+    background-image:url("https://static.wixstatic.com/media/0711ef_fbce4e75f396452a9fa444856c8af781~mv2.png/v1/fill/w_1000%2Ch_667%2Cal_c%2Cq_90%2Cusm_0.66_1.00_0.01/0711ef_fbce4e75f396452a9fa444856c8af781~mv2.png");
+}
+
+.design-duplex{
+    background-image:url("https://i.pinimg.com/originals/be/70/f6/be70f6f0f6665ccc7bfe1bf596b69115.jpg");
+}
+
+.design-box{
+    background-image:url("https://i.pinimg.com/originals/be/70/f6/be70f6f0f6665ccc7bfe1bf596b69115.jpg");
+}
+
+.design-parking{
+    background-image:url("https://images.squarespace-cdn.com/content/v1/69441d40ef78250a9e96f707/48a06d7e-8ddc-4ab3-8f75-68dd524b88b9/Albidhana%2BVillla%2B_NRDW.jpg");
+}
 </style>
 </head>
 <body>
@@ -96,11 +157,77 @@ footer{background:#062e61;color:#fff;padding:30px 20px;text-align:center}
 </section>
 
 <section id="designs">
-<h2>🏠 House Designs</h2><p>Choose a starting concept. Actual plans must be prepared and approved by qualified professionals according to the site and local rules.</p>
+
+<h2>🏠 House Designs</h2>
+
+<p>
+Choose a starting concept. Actual plans must be prepared and approved
+by qualified professionals according to the site and local rules.
+</p>
+
 <div class="gallery">
-<div class="design">Modern Front Elevation</div><div class="design">Modern Luxury Villa</div><div class="design">Simple Indian Home</div>
-<div class="design">Duplex House</div><div class="design">Box-Type Contemporary</div><div class="design">Home + Parking</div>
+
+<div class="design design-modern"
+onclick="showDesign(
+'Modern Front Elevation',
+'Modern clean front elevation with large windows, simple geometry and contemporary finishing.',
+'600–2000 sq.ft'
+)">
+<span>Modern Front Elevation</span>
 </div>
+
+
+<div class="design design-luxury"
+onclick="showDesign(
+'Modern Luxury Villa',
+'Premium villa concept with large glass windows, luxury facade and landscaped entrance.',
+'1800–4000+ sq.ft'
+)">
+<span>Modern Luxury Villa</span>
+</div>
+
+
+<div class="design design-simple"
+onclick="showDesign(
+'Simple Indian Home',
+'Simple and practical home design suitable for families looking for a clean and economical elevation.',
+'600–1800 sq.ft'
+)">
+<span>Simple Indian Home</span>
+</div>
+
+
+<div class="design design-duplex"
+onclick="showDesign(
+'Duplex House',
+'Modern two-level family home with balcony and contemporary front elevation.',
+'1200–3000+ sq.ft'
+)">
+<span>Duplex House</span>
+</div>
+
+
+<div class="design design-box"
+onclick="showDesign(
+'Box-Type Contemporary',
+'Contemporary box-style house with straight lines, glass and modern facade elements.',
+'1200–3000+ sq.ft'
+)">
+<span>Box-Type Contemporary</span>
+</div>
+
+
+<div class="design design-parking"
+onclick="showDesign(
+'Home + Parking',
+'Practical house design with dedicated front parking and modern entrance.',
+'1000–2500+ sq.ft'
+)">
+<span>Home + Parking</span>
+</div>
+
+</div>
+
 </section>
 
 <section>
@@ -202,6 +329,19 @@ function adminLogin(){if(document.getElementById("adminPass").value==="admin123"
 function adminLogout(){document.getElementById("adminLogin").style.display="block";document.getElementById("adminPanel").style.display="none";document.getElementById("adminPass").value=""}
 clearMaterials();
 calculateAuto();
+</script>
+<script>
+function showDesign(title, description, size){
+
+    alert(
+        title +
+        "\n\n" +
+        description +
+        "\n\nSuitable Size: " +
+        size
+    );
+
+}
 </script>
 </body>
 </html>
